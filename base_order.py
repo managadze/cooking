@@ -110,8 +110,7 @@ class BaseOrder(object):
                 if self.dishes[0].status == "cooking":
                     return True
                 return False
-            else:
-                return True
+            return True
         else:  # для двух блюд в заказе:
             if new_status in SAME_STATUS:
                 if self.dishes[0].status == self.dishes[1].status == new_status:
@@ -127,8 +126,7 @@ class BaseOrder(object):
                     if self.dishes[0].status == "cooking" or self.dishes[1].status == "cooking":
                         return True
                     return False
-                else:
-                    return True
+                return True
 
 
 class BaseDish(Recipy):
